@@ -1,5 +1,5 @@
 ## Acerca del Proyecto
-###Objetivo
+### Objetivo
 <p>Aplicar los conocimientos adquiridos en clases del lenguaje de programacion Python </p>
 
 ### Descripcion del Caso
@@ -7,7 +7,7 @@
 Empresa con varias cuatro sucursales en el pais de Colombia, que ofrece informacion de las operaciones de cada tienda, el dueño requiere tomar conocimiento acerca de la produccion operativa de cada tienda (ingresos, costos, nivel de satisfaccion del cliente, categorias y productos mas vendidos), la informacion debe permitir realizar un analisis para selccionar la tienda que debe ser vendida por baja producción 
 </p>
 
-##Ambiente de Desarrollo
+## Ambiente de Desarrollo
 - Github : Control de versiones
 - Google Collab : Editor de Python
 - Matplotlib.pyplot, plotly.express  para generacion de Graficos
