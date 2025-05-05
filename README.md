@@ -112,7 +112,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 		Total de Costo de Envio por tienda
 
 ### F. Graficos
-- **Grafico de Barras Verticales - Distribucion de  Ingresos **
+- ** Grafico de Barras Verticales - Distribucion de  Ingresos **
 	Input
 		 Resultado de A. Calculo de Ingresos
 	Calculo
@@ -123,7 +123,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 	Output
 		Grafico de Distribucion de Ingresos por Tiendas
 
-- **Grafico de Barras Horizontales Distribucion Promedio de Satisfaccion**
+- ** Grafico de Barras Horizontales Distribucion Promedio de Satisfaccion**
 	Input
 		Resultado de C. Calculo de Ingresos
 	Calculo
@@ -132,7 +132,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 	Output
 		Grafico de Distribucion Promedio de Satisfaccion
 
-- **Grafico Pie  Distribucion Venta por Categorias de Tienda 1**
+- ** Grafico Pie  Distribucion Venta por Categorias de Tienda 1**
 	Input
 		Resultado de D. Ranking de Productos Mas y Menos vendidos
 	Calculo
@@ -147,5 +147,5 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 		plt.axis('equal')
 		plt.legend(loc="upper left")
 
-Output
+	Output
 		Grafico de Distribucion Venta por categorias Tienda 1
