@@ -1,5 +1,5 @@
 ## Acerca del Proyecto
-###Objetivo
+### Objetivo
 <p>Aplicar los conocimientos adquiridos en clases del lenguaje de programacion Python </p>
 
 ### Descripcion del Caso
@@ -19,30 +19,30 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 ## Desarrollo de Consultas
 ### A. Calculo de Facturacion
 - **Funcion de Calculo de Ingresos (tienda)**
-**input: **
-Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
+**input:**
+- Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
 **calculo**
-Importa archivo
-Lazo de sumatoria de precio
+- Importa archivo
+- Lazo de sumatoria de precio
 **output**
-ingresos totales
+- ingresos totales
 
 - **Programa principal, invoca a funcion y obtiene ingresos**
 **Ciclos de Ejecucion**
-ciclos(4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
-resultado = calculo_ingresos(tienda)
+- ciclos(4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
+- resultado = calculo_ingresos(tienda)
 **Resultado Final**
-Ingresos por Tienda
+- Ingresos por Tienda
 
 ### B. Ventas por Categoria
 - **Funcion de Conteo_Ventas (tienda,columna_a_contar)**
-**input: **
-tienda = direccion de file(/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
-columna_a_contar= 1 (Categoria)
+**input:**
+- tienda = direccion de file(/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
+- columna_a_contar= 1 (Categoria)
 **Calculo**
-Lazo de sumatoria de valores de columna 1 (Categoria)
+- Lazo de sumatoria de valores de columna 1 (Categoria)
 **Output**
-Totales por Categoria
+- Totales por Categoria
 
 - **Programa principal, invoca a funcion y obtiene Totales por Categoria**
 **Ciclos de Ejecucion**
