@@ -19,20 +19,20 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 ## Desarrollo de Consultas
 ### A. Calculo de Facturacion
 - **Funcion de Calculo de Ingresos (tienda)**
-**input:**
--- Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
-**calculo**
--- Importa archivo
++ **input:**
+  + Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
++ **calculo**
+  + Importa archivo
 -- Lazo de sumatoria de precio
-**output**
--- ingresos totales
++ **output**
+  + ingresos totales
 
 - **Programa principal, invoca a funcion y obtiene ingresos**
-**Ciclos de Ejecucion**
-- ciclos(4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
-- resultado = calculo_ingresos(tienda)
-**Resultado Final**
-- Ingresos por Tienda
++ **Ciclos de Ejecucion**
+  + ciclos(4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
+  + resultado = calculo_ingresos(tienda)
++ **Resultado Final**
+  + Ingresos por Tienda
 
 ### B. Ventas por Categoria
 - **Funcion de Conteo_Ventas (tienda,columna_a_contar)**
