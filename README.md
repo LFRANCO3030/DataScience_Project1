@@ -20,12 +20,12 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 ### A. Calculo de Facturacion
 - **Funcion de Calculo de Ingresos (tienda)**
 **input:**
-- Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
+-- Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
 **calculo**
-- Importa archivo
-- Lazo de sumatoria de precio
+-- Importa archivo
+-- Lazo de sumatoria de precio
 **output**
-- ingresos totales
+-- ingresos totales
 
 - **Programa principal, invoca a funcion y obtiene ingresos**
 **Ciclos de Ejecucion**
