@@ -23,7 +23,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
   + Tienda = direccion de file ('/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
 + **calculo**
   + Importa archivo
--- Lazo de sumatoria de precio
+-- suma = data['Precio'].sum()
 + **output**
   + ingresos totales
 
@@ -34,85 +34,77 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 + **Resultado Final**
   + Ingresos por Tienda
 
-### B. Ventas por Categoria
-**Funcion de Conteo_Ventas (tienda,columna_a_contar)**
+### B.  Catidad de Ventas por Categoria
+**Funcion de categoria_frecuencia (tienda)**
 + **input:**
   + tienda = direccion de file(/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
-  + columna_a_contar= 1 (Categoria)
 + **Calculo**
-  + Lazo de sumatoria de valores de columna 1 (Categoria)
+  + frecuencias = df['Categoría del Producto'].value_counts().head(5)
+  + frecuencias_df = frecuencias.reset_index()
+  + frecuencias_df.columns = ['Categoría del Producto', 'Cantidad']
 + **Output**
   + Totales por Categoria
 
 **Programa principal, invoca a funcion y obtiene Totales por Categoria**
 + **Ciclos de Ejecucion**
   + Ciclos (4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
-  + resultado = conteo_ventas(tienda,columna_a_contar)
-  + Sorteo de Categorias (Mayor a Menor)
-  + resultado_sort = dict(sorted(resultado.items(), key=lambda item: item[1], reverse = True)[:3])
-+ **Resultado Final**
+  + resultado = categoria_frecuencia(tienda)
+  **Resultado Final**
   + Conteo de Ventas por Categoria por Tienda
 
-### C. Calificacion Promedio Satisfacción  por Tienda
-**Funcion de Conteo_Ventas (tienda,columna_a_contar)**
+### C. Promedio de Calificacion
+**Funcion de calculo_calificacion (tienda)**
 + **input:**
   + tienda = direccion de file (/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
-  + columna_a_contar= 7 (Satisfaccion)
-+ **Calculo**
-  + Lazo 
-  + sumatoria de valores de columna 7 (Satisfaccion)
-  + Conteo de registros
-  + Calculo de promedio
-+ **Output**
+ + **Calculo**
+  + promedio_calificacion = df['Calificación'].mean()
+ + **Output**
   + Promedio de satisfaccion por tienda
 
-**Programa principal, invoca a funcion y obtiene Totales por Categoria**
+**Programa principal, invoca a funcion y obtiene Promedio Calificacion**
 + **Ciclo de Ejecucion**
   + Ciclos (4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
-  + resultado = round(calculo_calificacion(tienda,columna_a_sumar),2)
+  + resultado = round(calculo_calificacion(tienda),2)
 + **Resultado**
   + Satisfaccion Promedio  por tienda
 
 ### D. Productos Mas y Menos Vendidos  por Tienda
-**Funcion de Conteo_Ventas (tienda,columna_a_contar)**
+**Funcion de frecuencia_productos (tienda)**
 + **input:**
   + tienda = direccion de file (/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
-  + columna_a_contar= 0 (Producto)
+  + Opcion = 1:Maximos  2: Minimos
 + **Calculo**
-  + Lazo 
-  + sumatoria de valores de columna 0 (Producto)
-  + Conteo de registros
-  + Calculo de conteo de registros por producto
+  + if opcion == 1:
+    + frecuencias_prod_max = df['Producto'].value_counts().head(3)
+    + frecuencias_df_prod = frecuencias_prod_max.reset_index()
+  + else:
+    + frecuencias_prod_min = df['Producto'].value_counts().tail(3)
+    + frecuencias_df_prod = frecuencias_prod_min.reset_index()
 + **Output**
-  + Promedio de satisfaccion por tienda
+  + Promedio de calificacion
 
 **Programa principal, invoca a funcion y obtiene Totales por Categoria**
 + **Ciclo de Ejecucion**
   + Ciclos (4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
-  + resultado = conteo_ventas(tienda,columna_a_contar)
-  + Ranking de Productos mas vendidos(3)
-  + resultado_sort_max = dict(sorted(resultado.items(), key=lambda item: item[1], reverse = True)[:3])
-  + Ranking de Productos menos vendidos(3)
-  + resultado_sort_min = dict(sorted(resultado.items(), key=lambda item: item[1])[:3])
+  + resultado = conteo_ventas(tienda,opcion)
 + **Resultado Final**
-  + Ranking de los 3 productos mas vendidos
-  + Ranking de los 3 productos menos vendidos
+  + Ranking de Productos mas vendidos(3)
+  + Ranking de Productos menos vendidos(3)
+  
 
 ### E. Promedio de Costo de Envio  por Tienda
-**Funcion de calculo_envio (tienda,columna_a_sumar)**
+**Funcion de calculo_envio (tienda)**
 + **input:**
   + tienda = direccion de file (/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
-  + columna_a_contar= 3 (Costo Envio)
-+ **Calculo**
-  + Lazo 
-  + sumatoria de valores de columna 3 (Costo Envio)
+ + **Calculo**
+  + promedio_envio = df['Costo de envío'].mean()
 + **Output**
   + Total de Costo de Envio por tienda
 
 **Programa principal, invoca a funcion y obtiene Totales por Categoria**
 + **Ciclo de Ejecucion**
   + Ciclos (4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
-  + resultado = round(calculo_envio(tienda,columna_a_sumar),2)
+  + resultado = round(calculo_envio(tienda),2)
 + **Resultado Final**
   + Total de Costo de Envio por tienda
 
@@ -128,7 +120,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 
 **Grafico de Barras Horizontales Distribucion Promedio de Satisfaccion**
 + **input:**
-  + Resultado de C. Calculo de Ingresos
+  + Resultado de C. Promedio de Calificacion
 + **Calculo**
   + df = pd.DataFrame(dict(Tiendas = ["Tienda 1","Tienda 2", "Tienda 3","Tienda 4"],Satisfaccion = list(promedio_satisfaccion)))
   + fig = px.bar(df, x = 'Satisfaccion', y = 'Tiendas',pattern_shape = 'Tiendas', text_auto = True)
@@ -137,7 +129,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 
 **Grafico Pie  Distribucion Venta por Categorias de Tienda 1**
 + **input:**
-  + Resultado de D. Ranking de Productos Mas y Menos vendidos
+  + Resultado de D. Ranking de Categorias Tienda 1
 + **Calculo**
   + import matplotlib.pyplot as plt
   + plt.figure(figsize=(10, 8))
@@ -150,4 +142,4 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
   + plt.axis('equal')
   + plt.legend(loc="upper left")
 + **Output**
-  + Grafico de Distribucion Venta por categorias Tienda 1
+  + Grafico de Distribucion cantidad de ventas por categorias Tienda 1
