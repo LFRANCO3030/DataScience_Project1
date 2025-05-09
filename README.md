@@ -4,13 +4,14 @@
 
 ### Descripcion del Caso
 <p>
-Empresa con varias cuatro sucursales en el pais de Colombia, que ofrece informacion de las operaciones de cada tienda, el dueño requiere tomar conocimiento acerca de la produccion operativa de cada tienda (ingresos, costos, nivel de satisfaccion del cliente, categorias y productos mas vendidos), la informacion debe permitir realizar un analisis para selccionar la tienda que debe ser vendida por baja producción 
+Empresa con varias cuatro sucursales en el pais de Colombia, que ofrece informacion de las operaciones de cada tienda, el dueño requiere tomar conocimiento acerca de la produccion operativa de cada tienda (ingresos, costos, nivel de satisfaccion del cliente, categorias y productos mas vendidos), la informacion debe permitir realizar un analisis para seleccionar la tienda que debe ser vendida por baja producción 
 </p>
 
 ## Ambiente de Desarrollo
 - Github : Control de versiones
 - Google Collab : Editor de Python
 - Matplotlib.pyplot, plotly.express  para generacion de Graficos
+- Folium
 
 ## Carga de Datos
 **Clonamos repositorio de Datos de Github en Drive**
@@ -129,7 +130,7 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
 
 **Grafico Pie  Distribucion Venta por Categorias de Tienda 1**
 + **input:**
-  + Resultado de D. Ranking de Categorias Tienda 1
+  + Resultado de Ranking de Categorias Tienda 1
 + **Calculo**
   + import matplotlib.pyplot as plt
   + plt.figure(figsize=(10, 8))
@@ -143,3 +144,26 @@ git clone https://github.com/alura-es-cursos/challenge1-data-science-latam.git
   + plt.legend(loc="upper left")
 + **Output**
   + Grafico de Distribucion cantidad de ventas por categorias Tienda 1
+### E. Mapa de Calor
+**Funcion desempeno_geografico(tienda)**
++ **Input**
+  + tienda = direccion de file (/content/challenge1-data-science-latam/base-de-datos-challenge1-latam/tienda_1 .csv)
++ **Calculo**
+  +  import folium
+  +  from folium.plugins import HeatMap
+  +  import pandas as pd
+  +  data= pd.read_csv(tienda)
+  +  df = pd.DataFrame(data)
+  +  colombia_coords = [4.5709, -74.2971]
+  +  mapa_colombia = folium.Map(location=colombia_coords, zoom_start=8)
+  +  heat_data = [[row['lat'], row['lon']] for index, row in df.iterrows()]
+  +  HeatMap(heat_data).add_to(mapa_colombia)
+  +  return mapa_colombia 
++ **Output**
+  +  Mapa de Calor
+    
+**Programa principal, invoca a funcion y genera mapa de Calor**
++ **Ciclo de Ejecucion**
+  +  Ciclos (4) de invocacion(tienda1,tienda2,tienda3,tienda4) a la funcion
++ **Resultado Final**
+  +  Mapa de Calor 
